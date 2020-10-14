@@ -1,0 +1,16 @@
+@font-face {
+ font-family: 'Harmattan';
+ src: url(../fonts/Harmattan-Regular.ttf);
+ font-weight: 400;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'Harmattan';
+ src: url(../fonts/Harmattan-Bold.ttf);
+ font-weight: 700;
+ font-style: normal;
+}
+
+@mixin Harmattan {
+ font-family: 'Harmattan', sans-serif;
+}

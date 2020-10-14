@@ -1,4 +1,119 @@
 * {
   box-sizing: border-box;
 }
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@font-face {
+  font-family: 'Harmattan';
+  src: url(../fonts/Harmattan-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harmattan';
+  src: url(../fonts/Harmattan-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Harmattan', sans-serif;
+  background-color: #000000;
+  color: #fff;
+}
+
+.navbar-wrap {
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 40px;
+  cursor: pointer;
+  letter-spacing: -2.5px;
+  display: block;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 2.5vw;
+}
+
+.nav li:hover .nav__links:before {
+  transform: translateX(100%);
+}
+
+.nav__links {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  color: #ffffff;
+  font-size: 25px;
+  transition: all .2s linear;
+  overflow: hidden;
+}
+
+.nav__links:last-child {
+  margin-right: 0;
+}
+
+.nav__links:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(270deg, #0b0b0d 5%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.8) 95%, #0b0b0d);
+  transform: translateX(-100%);
+  backface-visibility: hidden;
+  transform-origin: left;
+  transition: all .2s linear;
+}
+
+.nav__links:hover {
+  opacity: .6;
+}
 /*# sourceMappingURL=style.css.map */
