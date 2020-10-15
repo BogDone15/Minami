@@ -6,6 +6,6 @@ VANTA.CELLS({
  minHeight: 200.00,
  minWidth: 200.00,
  scale: 1.00,
- color1: 0x1e1e1e,
- color2: 0x434328
+ color1: 0x1f2a2a,
+ color2: 0x141411
 })

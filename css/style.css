@@ -199,6 +199,109 @@ header {
 }
 
 .hero {
-  padding-top: 200px;
+  position: relative;
+  padding-top: 400px;
+}
+
+.hero__wrap {
+  display: flex;
+}
+
+.hero__content {
+  width: 50%;
+  max-width: 500px;
+}
+
+.hero__content-title {
+  font-size: 4.5rem;
+  line-height: 0.9;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(145deg, #ffdbf1, #daf4f2 32%, #7dccf0 74%, #2013bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.hero__content-text {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-bottom: 2rem;
+}
+
+.hero__content-info {
+  position: relative;
+  padding: .75rem 1.875rem .25rem 0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.hero__content-info::before, .hero__content-info::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  content: "";
+  background-color: #fff;
+}
+
+.hero__content-info::before {
+  opacity: .5;
+}
+
+.hero__content-info::after {
+  transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+  transform-origin: right center;
+  transform: scaleX(0);
+}
+
+.hero__arrow {
+  width: 12px;
+  height: 11px;
+  transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95), opacity 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+}
+
+.hero__arrow.normal {
+  position: absolute;
+  top: 45%;
+  right: 2%;
+}
+
+.hero__arrow.hover {
+  position: absolute;
+  top: 45%;
+  right: 8%;
+  opacity: 0;
+  transform: translate(-8%, -1%);
+}
+
+.hero__image {
+  width: 42%;
+  background-image: url(../img/img-01.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 204px;
+  bottom: 0;
+  z-index: 10;
+  height: 700px;
+}
+
+.hero__content:hover .hero__content-info::after {
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+.hero__content-info:hover .hero__arrow.normal {
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.hero__content-info:hover .hero__arrow.hover {
+  opacity: 1;
+  transform: translateX(100%);
 }
 /*# sourceMappingURL=style.css.map */

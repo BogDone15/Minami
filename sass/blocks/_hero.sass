@@ -1,2 +1,78 @@
 .hero
- padding-top: 200px
+ position: relative
+ padding-top: 400px 
+ &__wrap
+  display: flex
+ &__content
+  width: 50%
+  max-width: 500px
+  &-title
+   font-size: 4.5rem
+   line-height: 0.9
+   margin-bottom: 2.5rem
+   background: linear-gradient(145deg,#ffdbf1,#daf4f2 32%,#7dccf0 74%,#2013bb)
+   -webkit-background-clip: text
+   -webkit-text-fill-color: transparent
+   display: block
+  &-text
+   font-size: 1.9rem
+   font-weight: 400
+   line-height: 0.8
+   margin-bottom: 2rem
+  &-info
+   position: relative
+   padding: .75rem 1.875rem .25rem 0
+   cursor: pointer
+   text-transform: uppercase
+   &::before, &::after
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 1px
+    content: ""
+    background-color: #fff
+   &::before
+    opacity: .5
+   &::after
+    transition: transform .3s cubic-bezier(.35,.755,.42,.95)
+    transform-origin: right center
+    transform: scaleX(0)  
+ &__arrow
+  width: 12px
+  height: 11px
+  transition: transform .3s cubic-bezier(.35,.755,.42,.95),opacity .3s cubic-bezier(.35,.755,.42,.95)
+  &.normal
+   position: absolute
+   top: 45%
+   right: 2%
+  &.hover
+   position: absolute
+   top: 45%
+   right: 8%
+   opacity: 0
+   transform: translate(-8%, -1%)
+ &__image
+  width: 42%
+  background-image: url(../img/img-01.jpg)
+  background-position: 50%
+  background-size: cover
+  background-repeat: no-repeat
+  position: absolute
+  right: 0
+  top: 204px
+  bottom: 0
+  z-index: 10
+  height: 700px
+
+.hero__content:hover .hero__content-info::after
+ transform-origin: left center
+ transform: scaleX(1)
+
+.hero__content-info:hover .hero__arrow.normal
+ opacity: 0
+ transform: translate(100%)
+
+.hero__content-info:hover .hero__arrow.hover
+ opacity: 1
+ transform: translateX(100%)
