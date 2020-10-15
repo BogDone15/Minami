@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -53,6 +57,10 @@ body {
   font-family: 'Harmattan', sans-serif;
   background-color: #000000;
   color: #fff;
+}
+
+header {
+  height: 100px;
 }
 
 .navbar-wrap {
@@ -115,5 +123,66 @@ body {
 
 .nav__links:hover {
   opacity: .6;
+}
+
+.intro {
+  min-height: calc( 100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__title {
+  line-height: 0.8;
+  letter-spacing: -7px;
+  font-size: 11rem;
+  background: linear-gradient(145deg, #ffdbf1, #daf4f2 32%, #7dccf0 74%, #2013bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  text-align: center;
+}
+
+.intro .scroll {
+  height: 9.25rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: .625rem;
+  display: flex;
+  justify-content: center;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.intro .scroll__line {
+  width: 1px;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 0.995);
+  transform: translateY(0);
+}
+
+.intro .scroll__line::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: #fff;
+  opacity: .5;
+}
+
+.intro .scroll__line::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: #fff;
+  animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) infinite forwards;
 }
 /*# sourceMappingURL=style.css.map */

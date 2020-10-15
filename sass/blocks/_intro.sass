@@ -1,0 +1,50 @@
+.intro
+ min-height: calc( 100vh - 100px )
+ display: flex
+ justify-content: center
+ align-items: center
+ &__title
+  line-height: 0.8
+  letter-spacing: -7px
+  font-size: 11rem
+  background: linear-gradient(145deg,#ffdbf1,#daf4f2 32%,#7dccf0 74%,#2013bb)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  display: block
+  text-align: center
+
+ .scroll
+  height: 9.25rem
+  position: absolute
+  bottom: 0
+  left: 50%
+  width: .625rem
+  display: flex
+  justify-content: center
+  transform: translate(-50%,50%)
+  overflow: hidden
+  cursor: pointer
+  &__line
+   width: 1px
+   height: 100%
+   position: relative
+   transition: transform .6s cubic-bezier(.86,0,.07,.995)
+   transform: translateY(0)
+   &::before
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    content: ""
+    background-color: #fff
+    opacity: .5
+   &::after
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    content: ""
+    background-color: #fff
+    animation: scrolldown 2.2s cubic-bezier(.76,0,.3,1) infinite forwards
