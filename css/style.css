@@ -454,4 +454,53 @@ body {
 .sidebar__list-item:last-child {
   transition-delay: .3s;
 }
+
+.blur {
+  padding-top: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.blur__title {
+  font-size: 4.5rem;
+  letter-spacing: -2px;
+  background: linear-gradient(145deg, #ffdbf1, #daf4f2 32%, #7dccf0 74%, #2013bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.blur__title-text {
+  animation: blurText 3s 0s infinite;
+  display: inline-block;
+  position: relative;
+}
+
+.blur__title-text.delay {
+  animation: blurTextReverse 3s infinite;
+}
+
+@keyframes blurText {
+  0% {
+    text-shadow: 0 0 20px #fff;
+  }
+  50% {
+    text-shadow: 0 0 0 #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff;
+  }
+}
+
+@keyframes blurTextReverse {
+  0% {
+    text-shadow: 0 0 0 #fff;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff;
+  }
+  to {
+    text-shadow: 0 0 0 #fff;
+  }
+}
 /*# sourceMappingURL=style.css.map */
