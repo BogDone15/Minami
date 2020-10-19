@@ -1,5 +1,5 @@
 .footer
- padding-top: 300px
+ padding-top: 15rem
  &__title
   line-height: 0.8
   font-size: 4rem
@@ -18,7 +18,7 @@
   color: #ffffff
   display: inline-block
   text-decoration: none
-  transition: opacity .3s linear
+  transition: opacity .3s cubic-bezier(.35,.755,.42,.95)
   &::before, &::after
    @include pseudo
   &::before
@@ -74,6 +74,9 @@
    padding: .5rem 1.4rem .5rem 0
    text-decoration: none
    color: #ffffff
+   transition: opacity .3s cubic-bezier(.35,.755,.42,.95)
+   &:hover
+    opacity: .6
    &:hover .footer__social-label::before
     transform-origin: left center
     transform: scaleX(1)   
