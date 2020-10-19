@@ -24,14 +24,20 @@
    padding: .75rem 1.875rem .25rem 0
    cursor: pointer
    text-transform: uppercase
+   transition: opacity .3s linear
+   &:hover
+     opacity: .5
+   &:hover .hero__arrow.hover
+    opacity: 1
+    transform: translateX(100%)     
+   &:hover .hero__arrow.normal
+    opacity: 0
+    transform: translate(100%)
+   &:hover::after
+    transform-origin: left center
+    transform: scaleX(1)    
    &::before, &::after
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    height: 1px
-    content: ""
-    background-color: #fff
+    @include pseudo
    &::before
     opacity: .5
    &::after
@@ -64,15 +70,3 @@
   bottom: 0
   z-index: 1
   height: 700px
-
-.hero__content:hover .hero__content-info::after
- transform-origin: left center
- transform: scaleX(1)
-
-.hero__content-info:hover .hero__arrow.normal
- opacity: 0
- transform: translate(100%)
-
-.hero__content-info:hover .hero__arrow.hover
- opacity: 1
- transform: translateX(100%)

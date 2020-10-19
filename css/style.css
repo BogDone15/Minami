@@ -235,6 +235,26 @@ body {
   padding: .75rem 1.875rem .25rem 0;
   cursor: pointer;
   text-transform: uppercase;
+  transition: opacity .3s linear;
+}
+
+.hero__content-info:hover {
+  opacity: .5;
+}
+
+.hero__content-info:hover .hero__arrow.hover {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+.hero__content-info:hover .hero__arrow.normal {
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.hero__content-info:hover::after {
+  transform-origin: left center;
+  transform: scaleX(1);
 }
 
 .hero__content-info::before, .hero__content-info::after {
@@ -242,6 +262,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 5;
   height: 1px;
   content: "";
   background-color: #fff;
@@ -289,21 +310,6 @@ body {
   bottom: 0;
   z-index: 1;
   height: 700px;
-}
-
-.hero__content:hover .hero__content-info::after {
-  transform-origin: left center;
-  transform: scaleX(1);
-}
-
-.hero__content-info:hover .hero__arrow.normal {
-  opacity: 0;
-  transform: translate(100%);
-}
-
-.hero__content-info:hover .hero__arrow.hover {
-  opacity: 1;
-  transform: translateX(100%);
 }
 
 .sidebar {
@@ -516,5 +522,178 @@ body {
   -webkit-text-fill-color: transparent;
   display: block;
   text-align: center;
+}
+
+.footer__email {
+  font-size: 2rem;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity .3s linear;
+}
+
+.footer__email::before, .footer__email::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 1px;
+  content: "";
+  background-color: #fff;
+}
+
+.footer__email::before {
+  opacity: .5;
+}
+
+.footer__email::after {
+  transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+  transform-origin: right center;
+  transform: scaleX(0);
+}
+
+.footer__email:hover::after {
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+.footer__email:hover {
+  opacity: .5;
+}
+
+.footer .rail {
+  position: relative;
+  margin-top: 80px;
+}
+
+.footer .rail__wrap {
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.footer .rail__item {
+  display: inline-block;
+  padding: 10px 0;
+  animation: railStatic 15s linear infinite;
+}
+
+.footer .rail__item-label {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #000;
+  background: linear-gradient(145deg, #2013bb, #7dccf0 32%, #daf4f2 74%, #ffdbf1);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  padding-right: 6.25rem;
+  line-height: 1;
+  font-size: 16rem;
+  font-weight: 700;
+}
+
+.footer__arrow {
+  width: 12px;
+  height: 11px;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.footer__social-link {
+  display: inline-block;
+  position: relative;
+  padding: .5rem 1.4rem .5rem 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer__social-link:hover .footer__social-label::before {
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+.footer__social-link:hover .footer__arrow.normal {
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.footer__social-link:hover .footer__arrow.hover {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.footer__social-label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer__social-label::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 1px;
+  content: "";
+  background-color: #fff;
+  transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+  transform-origin: right center;
+  transform: scaleX(0);
+}
+
+.footer__social-item {
+  margin-right: 3rem;
+}
+
+.footer__social-item:last-child {
+  margin-right: 0;
+}
+
+.footer__social-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.footer__arrow {
+  transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95), opacity 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+}
+
+.footer__arrow.normal {
+  position: relative;
+}
+
+.footer__arrow.hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  opacity: 0;
+}
+
+@keyframes railStatic {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
