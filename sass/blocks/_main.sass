@@ -1,0 +1,44 @@
+.main
+ margin-top: 10rem
+ &__wrap
+  list-style: none
+  font-size: 0
+  &-left
+   display: inline-block
+   vertical-align: top
+   font-size: 1rem
+   width: 50%
+  &-title
+   @include gradient
+   font-size: 4.5rem
+   line-height: 0.9
+  &-right
+   display: inline-block
+   vertical-align: top
+   font-size: 1rem
+   width: 50%
+   text-align: right
+  &-content
+   width: 50%
+   position: relative
+   max-width: 25rem
+   max-height: 25rem
+   display: inline-block
+  &-text
+   position: absolute
+   top: 0
+   left: 0
+   width: 100%
+   animation: rotating 10s linear infinite
+  &-year
+   position: absolute
+   top: 0
+   left: 0
+   width: 100%
+
+@keyframes rotating
+ 0%
+  transform: rotate(0deg)
+ to
+  transform: rotate(1turn)
+

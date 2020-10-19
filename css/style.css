@@ -588,16 +588,17 @@ body {
 }
 
 .footer .rail__item-label {
-  display: inline-block;
   text-transform: uppercase;
   color: #000;
-  background: linear-gradient(145deg, #2013bb, #7dccf0 32%, #daf4f2 74%, #ffdbf1);
+  background: linear-gradient(145deg, #ffdbf1, #daf4f2 32%, #7dccf0 74%, #2013bb);
   -webkit-background-clip: text;
-  -webkit-text-stroke: 4px transparent;
+  -webkit-text-fill-color: transparent;
+  display: block;
   padding-right: 6.25rem;
   line-height: 1;
   font-size: 16rem;
   font-weight: 700;
+  display: inline-block;
 }
 
 .footer__arrow {
@@ -939,5 +940,70 @@ body {
   width: 100%;
   object-fit: cover;
   pointer-events: none;
+}
+
+.main {
+  margin-top: 10rem;
+}
+
+.main__wrap {
+  list-style: none;
+  font-size: 0;
+}
+
+.main__wrap-left {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  width: 50%;
+}
+
+.main__wrap-title {
+  background: linear-gradient(145deg, #ffdbf1, #daf4f2 32%, #7dccf0 74%, #2013bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  font-size: 4.5rem;
+  line-height: 0.9;
+}
+
+.main__wrap-right {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  width: 50%;
+  text-align: right;
+}
+
+.main__wrap-content {
+  width: 50%;
+  position: relative;
+  max-width: 25rem;
+  max-height: 25rem;
+  display: inline-block;
+}
+
+.main__wrap-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: rotating 10s linear infinite;
+}
+
+.main__wrap-year {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 /*# sourceMappingURL=style.css.map */
