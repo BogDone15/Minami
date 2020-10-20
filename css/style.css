@@ -950,6 +950,8 @@ body {
 
 .main {
   margin-top: 10rem;
+  padding-bottom: 5rem;
+  overflow-x: hidden;
 }
 
 .main__wrap {
@@ -1014,18 +1016,14 @@ body {
 
 .carousel {
   display: flex;
+  position: relative;
   margin-top: 6rem;
-}
-
-.carousel__wrap {
-  display: flex;
-  overflow: visible;
 }
 
 .carousel__item {
   background-color: #2b3147;
-  height: 26rem;
-  width: 323px;
+  height: 27rem;
+  width: 374px;
   color: #b5a8dd;
   display: flex;
   flex-direction: column;
@@ -1038,7 +1036,7 @@ body {
 }
 
 .carousel__item-bottom {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 400;
   margin: 0;
   line-height: .9;
@@ -1051,7 +1049,7 @@ body {
 }
 
 .carousel__item-top-bignumber {
-  font-size: 7.5rem;
+  font-size: 10.5rem;
   letter-spacing: -10px;
 }
 
@@ -1066,12 +1064,12 @@ body {
 .carousel__left-text {
   font-size: 1.8rem;
   font-weight: 400;
-  max-width: 310px;
+  max-width: 250px;
   margin-bottom: 1.5rem;
 }
 
 .carousel__right {
+  cursor: grab;
   width: 66.66666667%;
-  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

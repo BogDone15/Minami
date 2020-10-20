@@ -1,5 +1,7 @@
 .main
  margin-top: 10rem
+ padding-bottom: 5rem
+ overflow-x: hidden
  &__wrap
   list-style: none
   font-size: 0
@@ -43,14 +45,12 @@
 
 .carousel
    display: flex
+   position: relative
    margin-top: 6rem
-   &__wrap
-      display: flex
-      overflow: visible
    &__item
       background-color: #2b3147
-      height: 26rem
-      width: 323px
+      height: 27rem
+      width: 374px
       color: #b5a8dd
       display: flex
       flex-direction: column
@@ -61,7 +61,7 @@
       transition: color .6s cubic-bezier(.35,.755,.42,.95),background .6s cubic-bezier(.35,.755,.42,.95)
       margin-right: 20px
       &-bottom
-         font-size: 1.9rem
+         font-size: 1.6rem
          font-weight: 400
          margin: 0
          line-height: .9
@@ -70,7 +70,7 @@
          justify-content: space-between
          line-height: 1
          &-bignumber
-            font-size: 7.5rem
+            font-size: 10.5rem
             letter-spacing: -10px
          &-smallnumber
             font-size: 1.9rem
@@ -79,10 +79,10 @@
       &-text
          font-size: 1.8rem
          font-weight: 400
-         max-width: 310px
+         max-width: 250px
          margin-bottom: 1.5rem
       &-content
    &__right
+      cursor: grab
       width: 66.66666667%
-      overflow: hidden
       
