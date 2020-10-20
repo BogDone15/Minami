@@ -60,6 +60,12 @@
       padding: 1.875rem
       transition: color .6s cubic-bezier(.35,.755,.42,.95),background .6s cubic-bezier(.35,.755,.42,.95)
       margin-right: 20px
+      &:hover .carousel__item-bg
+         opacity: .5
+         transform: scale(1) 
+      &:hover .carousel__item-rail
+         opacity: .5
+         transform: translateY(0)
       &-bottom
          font-size: 1.6rem
          font-weight: 400
@@ -74,6 +80,47 @@
             letter-spacing: -10px
          &-smallnumber
             font-size: 1.9rem
+      &-rail
+         position: relative
+         overflow: hidden
+         transition: opacity .6s cubic-bezier(.35,.755,.42,.95),transform .6s cubic-bezier(.35,.755,.42,.95)
+         opacity: 0
+         transform: translateY(100%)
+         &-content
+            display: inline-block
+            position: relative
+            animation: railStatic 12s linear infinite
+            &-label
+               line-height: 1
+               display: inline-block
+               text-transform: uppercase
+               position: relative
+               font-weight: 400
+               color: #b5a8dd
+               padding-right: 4rem
+               font-size: 4rem
+      &-center
+         white-space: nowrap
+         font-size: 0
+         display: flex
+         position: absolute
+         left: 0
+         right: 0
+         bottom: 50%
+         transform: translateY(90%)
+         overflow: hidden
+      &-bg
+         position: absolute
+         top: 0
+         left: 0
+         right: 0
+         bottom: 0
+         background-size: cover
+         background-repeat: no-repeat
+         background-position: top
+         opacity: 0
+         transition: transform .6s cubic-bezier(.35,.755,.42,.95),opacity .6s cubic-bezier(.35,.755,.42,.95)
+         transform: scale(1.15) rotate(-5deg)
    &__left
       width: 33.333333333%
       &-text

@@ -1035,6 +1035,16 @@ body {
   margin-right: 20px;
 }
 
+.carousel__item:hover .carousel__item-bg {
+  opacity: .5;
+  transform: scale(1);
+}
+
+.carousel__item:hover .carousel__item-rail {
+  opacity: .5;
+  transform: translateY(0);
+}
+
 .carousel__item-bottom {
   font-size: 1.6rem;
   font-weight: 400;
@@ -1055,6 +1065,57 @@ body {
 
 .carousel__item-top-smallnumber {
   font-size: 1.9rem;
+}
+
+.carousel__item-rail {
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95), transform 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.carousel__item-rail-content {
+  display: inline-block;
+  position: relative;
+  animation: railStatic 12s linear infinite;
+}
+
+.carousel__item-rail-content-label {
+  line-height: 1;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+  color: #b5a8dd;
+  padding-right: 4rem;
+  font-size: 4rem;
+}
+
+.carousel__item-center {
+  white-space: nowrap;
+  font-size: 0;
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(90%);
+  overflow: hidden;
+}
+
+.carousel__item-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95), opacity 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+  transform: scale(1.15) rotate(-5deg);
 }
 
 .carousel__left {
