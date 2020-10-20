@@ -236,6 +236,7 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   transition: opacity .3s linear;
+  color: #ffffff;
 }
 
 .hero__content-info:hover {
@@ -863,11 +864,12 @@ body {
 }
 
 .abstract__inview {
-  padding: .75rem 1.875rem .75rem 0;
+  position: relative;
+  padding: .75rem 1.875rem .25rem 0;
+  cursor: pointer;
   text-transform: uppercase;
+  transition: opacity .3s linear;
   color: #ffffff;
-  font-size: 1.2rem;
-  transition: opacity 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
 }
 
 .abstract__inview::after, .abstract__inview::before {
@@ -942,6 +944,10 @@ body {
   pointer-events: none;
 }
 
+.background__video-wrapper {
+  height: 100%;
+}
+
 .main {
   margin-top: 10rem;
 }
@@ -963,8 +969,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
-  font-size: 4.5rem;
-  line-height: 0.9;
+  font-size: 5rem;
+  line-height: 0.8;
+  max-width: 700px;
 }
 
 .main__wrap-right {
@@ -972,14 +979,12 @@ body {
   vertical-align: top;
   font-size: 1rem;
   width: 50%;
-  text-align: right;
+  text-align: center;
 }
 
 .main__wrap-content {
   width: 50%;
   position: relative;
-  max-width: 25rem;
-  max-height: 25rem;
   display: inline-block;
 }
 
@@ -1005,5 +1010,68 @@ body {
   to {
     transform: rotate(1turn);
   }
+}
+
+.carousel {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.carousel__wrap {
+  display: flex;
+  overflow: visible;
+}
+
+.carousel__item {
+  background-color: #2b3147;
+  height: 26rem;
+  width: 323px;
+  color: #b5a8dd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  padding: 1.875rem;
+  transition: color 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95), background 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+  margin-right: 20px;
+}
+
+.carousel__item-bottom {
+  font-size: 1.9rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: .9;
+}
+
+.carousel__item-top {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+.carousel__item-top-bignumber {
+  font-size: 7.5rem;
+  letter-spacing: -10px;
+}
+
+.carousel__item-top-smallnumber {
+  font-size: 1.9rem;
+}
+
+.carousel__left {
+  width: 33.333333333%;
+}
+
+.carousel__left-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  max-width: 310px;
+  margin-bottom: 1.5rem;
+}
+
+.carousel__right {
+  width: 66.66666667%;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

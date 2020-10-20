@@ -1,5 +1,4 @@
 .abstract
- // margin-top: 20rem
  &__wrap
   margin-top: 40rem
   position: relative 
@@ -35,11 +34,7 @@
    opacity: 0
    transform: translate(100%)
  &__inview
-  padding: .75rem 1.875rem .75rem 0
-  text-transform: uppercase
-  color: #ffffff
-  font-size: 1.2rem
-  transition: opacity .3s cubic-bezier(.35,.755,.42,.95)
+  @include link
   &::after, &::before
    @include pseudo
   &::before
