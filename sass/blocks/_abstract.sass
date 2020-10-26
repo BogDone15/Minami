@@ -1,68 +1,69 @@
 .abstract
- &__wrap
-  margin-top: 40rem
-  position: relative 
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
- &__bg
-  position: absolute
-  left: 50%
-  top: 50%
-  z-index: -1
-  transform: translate(-50%, -50%)
- &__img
-  width: 600px
-  height: 600px
- &__content
-  max-width: 750px
-  text-align: center
- &__text
-  font-size: 5rem
-  line-height: 0.9
-  letter-spacing: -0.1rem
-  @include gradient
-  margin-bottom: 2.5rem
- &__link
-  text-decoration: none
-  position: relative
-  &:hover .abstract__arrow.hover
-   opacity: 1
-   transform: translate(-50%, -50%)     
-  &:hover .abstract__arrow.normal
-   opacity: 0
-   transform: translate(100%)
- &__inview
-  @include link
-  &::after, &::before
-   @include pseudo
-  &::before
-   opacity: .5
-  &::after
-   transition: transform .3s cubic-bezier(.35,.755,.42,.95)
-   transform-origin: right center
-   transform: scaleX(0)
-  &:hover
-   opacity: .5
-  &:hover::after
-   transform-origin: left center
-   transform: scaleX(1)  
- &__arrow
-  width: 12px
-  height: 11px
-  transition: transform .3s cubic-bezier(.35,.755,.42,.95),opacity .3s cubic-bezier(.35,.755,.42,.95)
-  &.normal
-   position: relative
-  &.hover
-   position: absolute
-   top: 40%
-   left: 50%
-   transform: translate(-150%,-50%)
-   opacity: 0
-  &-group
-   position: absolute
-   top: 50%
-   right: 0
-   transform: translateY(-50%)
+  margin-top: 33rem
+  &__wrap
+    position: relative 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__bg
+    position: absolute
+    // left: 50%
+    // top: 50% 
+    // transform: translate(-50%, -50%)
+    z-index: -1
+    animation: rotating 10s linear infinite
+  &__img
+    width: 600px
+    height: 600px
+  &__content
+    max-width: 750px
+    text-align: center
+  &__text
+    font-size: 5rem
+    line-height: 0.9
+    letter-spacing: -0.1rem
+    @include gradient
+    margin-bottom: 2.5rem
+  &__link
+    text-decoration: none
+    position: relative
+    &:hover .abstract__arrow.hover
+    opacity: 1
+    transform: translate(-50%, -50%)     
+    &:hover .abstract__arrow.normal
+    opacity: 0
+    transform: translate(100%)
+  &__inview
+    @include link
+    &::after, &::before
+    @include pseudo
+    &::before
+    opacity: .5
+    &::after
+    transition: transform .3s cubic-bezier(.35,.755,.42,.95)
+    transform-origin: right center
+    transform: scaleX(0)
+    &:hover
+    opacity: .5
+    &:hover::after
+    transform-origin: left center
+    transform: scaleX(1)  
+  &__arrow
+    width: 12px
+    height: 11px
+    transition: transform .3s cubic-bezier(.35,.755,.42,.95),opacity .3s cubic-bezier(.35,.755,.42,.95)
+    &.normal
+    position: relative
+    &.hover
+    position: absolute
+    top: 40%
+    left: 50%
+    transform: translate(-150%,-50%)
+    opacity: 0
+    &-group
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
 

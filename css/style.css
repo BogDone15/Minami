@@ -64,6 +64,15 @@ body {
   color: #fff;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #bdbaba;
+  border-radius: 10px;
+}
+
 .navbar-wrap {
   padding-top: 2rem;
   display: flex;
@@ -124,6 +133,30 @@ body {
 
 .nav__links:hover {
   opacity: .6;
+}
+
+.burger {
+  z-index: 200;
+  display: block;
+  position: fixed;
+  right: 30px;
+  top: 22px;
+  width: 40px;
+  height: 15px;
+  padding: 30px;
+  box-sizing: content-box;
+}
+
+.header__hamburger {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 11px;
+  background: #fff;
+}
+
+.header__hamburger:last-of-type {
+  margin-bottom: 0;
 }
 
 .intro {
@@ -463,7 +496,7 @@ body {
 }
 
 .blur {
-  padding-top: 450px;
+  padding-top: 21rem;
   display: flex;
   justify-content: center;
 }
@@ -705,7 +738,7 @@ body {
 }
 
 .recruit {
-  margin-top: 19rem;
+  margin-top: 26rem;
   background-image: url(../img/recruit-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -810,8 +843,11 @@ body {
   }
 }
 
+.abstract {
+  margin-top: 33rem;
+}
+
 .abstract__wrap {
-  margin-top: 40rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -821,10 +857,8 @@ body {
 
 .abstract__bg {
   position: absolute;
-  left: 50%;
-  top: 50%;
   z-index: -1;
-  transform: translate(-50%, -50%);
+  animation: rotating 10s linear infinite;
 }
 
 .abstract__img {
@@ -851,14 +885,8 @@ body {
 .abstract__link {
   text-decoration: none;
   position: relative;
-}
-
-.abstract__link:hover .abstract__arrow.hover {
   opacity: 1;
   transform: translate(-50%, -50%);
-}
-
-.abstract__link:hover .abstract__arrow.normal {
   opacity: 0;
   transform: translate(100%);
 }
@@ -870,9 +898,6 @@ body {
   text-transform: uppercase;
   transition: opacity .3s linear;
   color: #ffffff;
-}
-
-.abstract__inview::after, .abstract__inview::before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -881,23 +906,11 @@ body {
   height: 1px;
   content: "";
   background-color: #fff;
-}
-
-.abstract__inview::before {
   opacity: .5;
-}
-
-.abstract__inview::after {
   transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
   transform-origin: right center;
   transform: scaleX(0);
-}
-
-.abstract__inview:hover {
   opacity: .5;
-}
-
-.abstract__inview:hover::after {
   transform-origin: left center;
   transform: scaleX(1);
 }
@@ -906,21 +919,12 @@ body {
   width: 12px;
   height: 11px;
   transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95), opacity 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
-}
-
-.abstract__arrow.normal {
   position: relative;
-}
-
-.abstract__arrow.hover {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-150%, -50%);
   opacity: 0;
-}
-
-.abstract__arrow-group {
   position: absolute;
   top: 50%;
   right: 0;
@@ -949,7 +953,7 @@ body {
 }
 
 .main {
-  margin-top: 10rem;
+  margin-top: 21rem;
   padding-bottom: 5rem;
   overflow-x: hidden;
 }
