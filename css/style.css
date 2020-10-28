@@ -293,14 +293,6 @@ body::-webkit-scrollbar-thumb {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
-  transform: translate(-120%, 0px);
-  opacity: 0;
-  transition: all .4s linear;
-}
-
-.hero__content-title._active {
-  transform: translate(0px, 0px);
-  opacity: 1;
 }
 
 .hero__content-text {
@@ -327,6 +319,7 @@ body::-webkit-scrollbar-thumb {
   color: #ffffff;
   opacity: 0;
   transition: all .8s linear;
+  text-decoration: none;
 }
 
 .hero__content-info._active {
@@ -1016,8 +1009,20 @@ body::-webkit-scrollbar-thumb {
 .abstract__link {
   text-decoration: none;
   position: relative;
+  opacity: 0;
+  transition: all .8s linear;
+}
+
+.abstract__link._active {
+  opacity: 1;
+}
+
+.abstract__link:hover .abstract__arrow.hover {
   opacity: 1;
   transform: translate(-50%, -50%);
+}
+
+.abstract__link:hover .abstract__arrow.normal {
   opacity: 0;
   transform: translate(100%);
 }
@@ -1029,6 +1034,9 @@ body::-webkit-scrollbar-thumb {
   text-transform: uppercase;
   transition: opacity .3s linear;
   color: #ffffff;
+}
+
+.abstract__inview::after, .abstract__inview::before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1037,11 +1045,23 @@ body::-webkit-scrollbar-thumb {
   height: 1px;
   content: "";
   background-color: #fff;
+}
+
+.abstract__inview::before {
   opacity: .5;
+}
+
+.abstract__inview::after {
   transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
   transform-origin: right center;
   transform: scaleX(0);
+}
+
+.abstract__inview:hover {
   opacity: .5;
+}
+
+.abstract__inview:hover::after {
   transform-origin: left center;
   transform: scaleX(1);
 }
@@ -1050,12 +1070,21 @@ body::-webkit-scrollbar-thumb {
   width: 12px;
   height: 11px;
   transition: transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95), opacity 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+}
+
+.abstract__arrow.normal {
   position: relative;
+}
+
+.abstract__arrow.hover {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-150%, -50%);
   opacity: 0;
+}
+
+.abstract__arrow-group {
   position: absolute;
   top: 50%;
   right: 0;
