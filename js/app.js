@@ -10,13 +10,13 @@
 //  color2: 0x141411
 // })
 
-$(document).ready(function(){
+$(document).ready(function () {
  $(".owl-carousel").owlCarousel({
   margin: 20,
   items: 2,
   nav: true,
   dots: false,
-  navText: ["",""]
+  navText: ["", ""]
  });
 });
 
@@ -44,7 +44,6 @@ if (animItems.length > 0) {
      animItem.classList.remove('_active');
     }
    }
-
   }
  }
 
@@ -58,5 +57,69 @@ if (animItems.length > 0) {
  setTimeout(() => {
   animOnScroll();
  }, 500);
- 
+}
+
+// const nav = document.querySelector('#nav');
+// const navWrap = document.querySelector('.navbar-wrap');
+// const burger = document.querySelector('#burger');
+// let scrolltop = pageYOffset;
+
+// window.addEventListener("scroll", function () {
+//  if (pageYOffset > navWrap.offsetHeight) {
+//   burger.classList.add('showburger');
+//   nav.classList.add('shownav');
+//   // nav.style.display = 'none';
+//  } else {
+//   burger.classList.remove('showburger');
+//   nav.classList.remove('shownav');
+//   // nav.style.display = 'flex';
+//  }
+//  scrolltop = pageYOffset;
+// });
+
+// const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
+//  animationTime = 700,
+//  framesCount = 80;
+
+// anchors.forEach(function (item) {
+//  item.addEventListener('click', function (e) {
+//   e.preventDefault();
+
+//   let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+
+//   let scroller = setInterval(function () {
+//    let scrollBy = coordY / framesCount;
+
+//    if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+//     window.scrollBy(0, scrollBy);
+//    } else {
+//     window.scrollTo(0, coordY);
+//     clearInterval(scroller);
+//    }
+//   }, animationTime / framesCount);
+//  });
+// });
+
+let linkNav = document.querySelectorAll('[href^="#"]'),
+ V = 0.2;
+for (let i = 0; i < linkNav.length; i++) {
+ linkNav[i].addEventListener('click', function (e) {
+  e.preventDefault();
+  let w = window.pageYOffset,
+   hash = this.href.replace(/[^#]*(.*)/, '$1');
+  t = document.querySelector(hash).getBoundingClientRect().top,
+   start = null;
+  requestAnimationFrame(step);
+  function step(time) {
+   if (start === null) start = time;
+   let progress = time - start,
+    r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+   window.scrollTo(0, r);
+   if (r != w + t) {
+    requestAnimationFrame(step)
+   } else {
+    location.hash = hash
+   }
+  }
+ }, false);
 }

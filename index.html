@@ -12,18 +12,18 @@
 </head>
 
 <body id="body">
- <header>
+ <header id="start">
   <div class="container">
    <div class="navbar-wrap">
     <a class="logo _anim-items _anim-no-hide" href="index.html">MinamiDesignCo.</a>
     <ul class="nav _anim-items _anim-no-hide" id="nav">
-     <li><a class="nav__links" href="#">About us</a></li>
-     <li><a class="nav__links" href="#">Property</a></li>
-     <li><a class="nav__links" href="#">Partner</a></li>
-     <li><a class="nav__links" href="#">Recruit</a></li>
-     <li><a class="nav__links" href="#">Contact</a></li>
+     <li><a class="nav__links" href="#about">About us</a></li>
+     <li><a class="nav__links" href="#recruit">Recruit</a></li>
+     <li><a class="nav__links" href="#blur">Blur</a></li>
+     <li><a class="nav__links" href="#property">Property</a></li>
+     <li><a class="nav__links" href="#contact">Contact</a></li>
     </ul>
-    <div class="burger">
+    <div class="burger" id="burger">
       <span class="header__hamburger"></span>
       <span class="header__hamburger"></span>
     </div>
@@ -36,38 +36,50 @@
   <ul class="sidebar__list">
    <li class="sidebar__list-item">
     <button type="button" class="sidebar__link">
-     <span class="sidebar__label">Start</span>
-     <span class="sidebar__dot"></span>
+      <a class="sidebar__label-link" href="#start">
+        <span class="sidebar__label">start</span>
+        <span class="sidebar__dot"></span>
+      </a>
     </button>
    </li>
    <li class="sidebar__list-item">
     <button type="button" class="sidebar__link">
-     <span class="sidebar__label">about us</span>
-     <span class="sidebar__dot"></span>
+     <a class="sidebar__label-link" href="#about">
+      <span class="sidebar__label">about us</span>
+      <span class="sidebar__dot"></span>
+     </a>
     </button>
    </li>
    <li class="sidebar__list-item">
     <button type="button" class="sidebar__link">
-     <span class="sidebar__label">propery</span>
-     <span class="sidebar__dot"></span>
+      <a class="sidebar__label-link" href="#recruit">
+        <span class="sidebar__label">recruit</span>
+        <span class="sidebar__dot"></span>
+      </a>
     </button>
    </li>
    <li class="sidebar__list-item">
     <button type="button" class="sidebar__link">
-     <span class="sidebar__label">partner</span>
-     <span class="sidebar__dot"></span>
+      <a class="sidebar__label-link" href="#blur">
+        <span class="sidebar__label">blur</span>
+        <span class="sidebar__dot"></span>
+      </a>
     </button>
    </li>
    <li class="sidebar__list-item">
     <button type="button" class="sidebar__link">
-     <span class="sidebar__label">recruit</span>
-     <span class="sidebar__dot"></span>
+      <a class="sidebar__label-link" href="#property">
+        <span class="sidebar__label">property</span>
+        <span class="sidebar__dot"></span>
+      </a>
     </button>
    </li>
    <li class="sidebar__list-item">
     <button type="button" class="sidebar__link">
-     <span class="sidebar__label">contact</span>
-     <span class="sidebar__dot"></span>
+      <a class="sidebar__label-link" href="#contact">
+        <span class="sidebar__label">contact</span>
+        <span class="sidebar__dot"></span>
+      </a>
     </button>
    </li>
   </ul>
@@ -79,11 +91,9 @@
     We Use Design <br>
     to Make You Win
    </h1>
-   <div class="scroll">
-    <div class="scroll__line">
-
-    </div>
-   </div>
+   <a href="#about" class="scroll">
+    <div class="scroll__line"></div>
+   </a>
   </div>
  </section>
 
@@ -106,7 +116,7 @@
       </span>
      </a>
     </div>
-    <div class="hero__image"></div>
+    <div class="hero__image" id="about"></div>
    </div>
   </div>
  </section>
@@ -135,7 +145,7 @@
   </div>
  </section>
 
- <section class="recruit">
+ <section class="recruit" id="recruit">
   <div class="container">
    <div class="recruit__wrap">
     <div class="recruit__left">
@@ -163,7 +173,7 @@
   </div>
  </section>
 
- <section class="blur">
+ <section class="blur" id="blur">
   <div class="container">
    <h2 class="blur__title _anim-items _anim-no-hide">
     Don't get <span class="blur__title-text">lost</span> in the <span class="blur__title-text delay">noise.</span>
@@ -171,7 +181,7 @@
   </div>
  </section>
 
- <section class="main">
+ <section class="main" id="property">
   <div class="container">
    <div class="main__wrap">
     <div class="main__wrap-left">
@@ -297,7 +307,7 @@
   </div>
  </section>
 
- <footer class="footer">
+ <footer class="footer" id="contact">
   <h2 class="footer__title _anim-items _anim-no-hide">
    Become irreplaceable to <br>
    your customers.
