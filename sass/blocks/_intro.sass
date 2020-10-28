@@ -12,6 +12,12 @@
   -webkit-text-fill-color: transparent
   display: block
   text-align: center
+  transform: translate(0px, 120%)
+  opacity: 0
+  transition: all .3s linear
+  &._active
+      transform: translate(0px, 0px)
+      opacity: 1
 
  .scroll
   height: 9.25rem

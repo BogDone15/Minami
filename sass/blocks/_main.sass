@@ -15,6 +15,12 @@
    font-size: 5rem
    line-height: 0.8
    max-width: 700px
+   transform: translate(-120%, 0px)
+   opacity: 0
+   transition: all .5s linear
+   &._active
+    transform: translate(0px, 0px)
+    opacity: 1
   &-right
    display: inline-block
    vertical-align: top
@@ -30,7 +36,7 @@
    top: 0
    left: 0
    width: 100%
-   animation: rotating 10s linear infinite
+   animation: rotating 10s linear infinite  
   &-year
    position: absolute
    top: 0
@@ -128,6 +134,12 @@
          font-weight: 400
          max-width: 250px
          margin-bottom: 1.5rem
+         transform: translate(-120%, 0px)
+         opacity: 0
+         transition: all .5s linear
+         &._active
+            transform: translate(0px, 0px)
+            opacity: 1           
       &-content
    &__right
       cursor: grab

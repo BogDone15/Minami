@@ -9,6 +9,12 @@
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
   display: block
+  transform: scale(0)
+  opacity: 0
+  transition: all .5s linear
+  &._active
+    transform: scale(1)
+    opacity: 1
   &-text
    animation: blurText 3s 0s infinite
    display: inline-block
