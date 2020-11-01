@@ -1,22 +1,18 @@
-// VANTA.CELLS({
-//  el: "#body",
-//  mouseControls: true,
-//  touchControls: true,
-//  gyroControls: false,
-//  minHeight: 200.00,
-//  minWidth: 200.00,
-//  scale: 1.00,
-//  color1: 0x1f2a2a,
-//  color2: 0x141411
-// })
-
 $(document).ready(function () {
  $(".owl-carousel").owlCarousel({
-  margin: 20,
   items: 2,
   nav: true,
   dots: false,
-  navText: ["", ""]
+  navText: ["", ""],
+  responsive: {
+   0: {
+    items: 1
+   },
+   1025: {
+    items: 2,
+    margin: 20
+   }
+  }
  });
 });
 
@@ -59,9 +55,15 @@ if (animItems.length > 0) {
  }, 500);
 }
 
+const burger = document.querySelector('#burger');
+const topLine = document.querySelector('.top-line');
+const botLine = document.querySelector('.bot-line');
+burger.addEventListener('click', () => {
+ topLine.classList.toggle('toggleTop');
+ botLine.classList.toggle('toggleBot');
+})
 // const nav = document.querySelector('#nav');
 // const navWrap = document.querySelector('.navbar-wrap');
-// const burger = document.querySelector('#burger');
 // let scrolltop = pageYOffset;
 
 // window.addEventListener("scroll", function () {
@@ -75,29 +77,6 @@ if (animItems.length > 0) {
 //   // nav.style.display = 'flex';
 //  }
 //  scrolltop = pageYOffset;
-// });
-
-// const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-//  animationTime = 700,
-//  framesCount = 80;
-
-// anchors.forEach(function (item) {
-//  item.addEventListener('click', function (e) {
-//   e.preventDefault();
-
-//   let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-
-//   let scroller = setInterval(function () {
-//    let scrollBy = coordY / framesCount;
-
-//    if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-//     window.scrollBy(0, scrollBy);
-//    } else {
-//     window.scrollTo(0, coordY);
-//     clearInterval(scroller);
-//    }
-//   }, animationTime / framesCount);
-//  });
 // });
 
 let linkNav = document.querySelectorAll('[href^="#"]'),

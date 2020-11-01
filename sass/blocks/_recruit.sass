@@ -7,6 +7,7 @@
  &__wrap
   padding: 10rem 0
   display: flex
+  flex-wrap: wrap
   align-items: center
  &__left
   width: 50%
@@ -97,4 +98,31 @@
    background-image: url(../img/recruit-bg.jpg)
    background-size: cover
    background-repeat: no-repeat
+
+@media ( max-width: 991px )
+  .recruit
+    background-position-x: -100px
+    &__right
+      font-size: 3rem
+
+@media ( max-width: 820px ) and (orientation: landscape)
+  .recruit
+    margin-top: 14rem
+    background-position-x: -110px
+
+@media ( max-width: 667px ) and (orientation: landscape)
+  .recruit
+    background-position-x: -200px
+
+@media ( max-width: 568px ) and (orientation: landscape)
+  .recruit
+    background-position-x: -287px
    
+@media ( max-width: 565px )
+  .recruit
+    margin-top: 11rem
+    background-position-x: 0
+    &__left
+      display: none
+    &__right
+      width: 100%
