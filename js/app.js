@@ -58,9 +58,14 @@ if (animItems.length > 0) {
 const burger = document.querySelector('#burger');
 const topLine = document.querySelector('.top-line');
 const botLine = document.querySelector('.bot-line');
+const navColumn = document.querySelector('.nav__column');
+const intro__title = document.querySelector('.intro__title');
+
 burger.addEventListener('click', () => {
  topLine.classList.toggle('toggleTop');
  botLine.classList.toggle('toggleBot');
+ navColumn.classList.toggle('nav__column-active');
+ intro__title.classList.toggle('opacity__text');
 })
 // const nav = document.querySelector('#nav');
 // const navWrap = document.querySelector('.navbar-wrap');
