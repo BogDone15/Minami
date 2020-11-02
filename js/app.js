@@ -67,22 +67,6 @@ burger.addEventListener('click', () => {
  navColumn.classList.toggle('nav__column-active');
  intro__title.classList.toggle('opacity__text');
 })
-// const nav = document.querySelector('#nav');
-// const navWrap = document.querySelector('.navbar-wrap');
-// let scrolltop = pageYOffset;
-
-// window.addEventListener("scroll", function () {
-//  if (pageYOffset > navWrap.offsetHeight) {
-//   burger.classList.add('showburger');
-//   nav.classList.add('shownav');
-//   // nav.style.display = 'none';
-//  } else {
-//   burger.classList.remove('showburger');
-//   nav.classList.remove('shownav');
-//   // nav.style.display = 'flex';
-//  }
-//  scrolltop = pageYOffset;
-// });
 
 let linkNav = document.querySelectorAll('[href^="#"]'),
  V = 0.2;
